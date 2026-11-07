@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="tajirGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#245C3A" />
+      <stop offset="100%" stop-color="#183D2B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5BE64" />
+      <stop offset="100%" stop-color="#B88A24" />
+    </linearGradient>
+    <filter id="subtleDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#183D2B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Emblem Icon -->
+  <g transform="translate(10, 10)" filter="url(#subtleDrop)">
+    <!-- Shield / Seal Outer Ring -->
+    <circle cx="30" cy="30" r="28" fill="#F7F3EA" stroke="#245C3A" stroke-width="2"/>
+    <circle cx="30" cy="30" r="25" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3, 1.5"/>
+
+    <!-- Green Leaf Crescent Arch -->
+    <path d="M 18,36 C 14,24 22,14 30,12 C 32,20 28,32 18,36 Z" fill="url(#tajirGrad)"/>
+    <path d="M 42,36 C 46,24 38,14 30,12 C 28,20 32,32 42,36 Z" fill="url(#tajirGrad)"/>
+    
+    <!-- Central Golden Spire / Wheat Grain -->
+    <path d="M 30,14 C 33,21 34,28 30,35 C 26,28 27,21 30,14 Z" fill="url(#goldGrad)"/>
+    
+    <!-- Foundation Pedestal -->
+    <path d="M 22,41 L 38,41 L 35,46 L 25,46 Z" fill="#245C3A"/>
+    
+    <!-- Golden Diamond Star -->
+    <polygon points="30,8 32,11 30,14 28,11" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(78, 22)">
+    <!-- Primary Name -->
+    <text x="0" y="24" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="800" fill="#183D2B" letter-spacing="1.5">
+      TAJIR <tspan fill="#D6A642">TRADER</tspan>
+    </text>
+    
+    <!-- Tagline -->
+    <text x="2" y="42" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="9.5" font-weight="600" fill="#245C3A" letter-spacing="3.2">
+      TRADING WITH INTEGRITY
+    </text>
+
+    <!-- Accent Underline -->
+    <rect x="2" y="48" width="60" height="2" fill="url(#goldGrad)" rx="1"/>
+  </g>
+</svg>
+

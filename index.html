@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajir Trader — Quality Products. Trusted Trading. | Wholesale Product Catalog</title>
+    <meta name="description"
+        content="Discover premium wholesale vegetables, fruits, nuts, spices, and drinks with Tajir Trader. Trading with integrity for commercial partners worldwide.">
+    <meta name="keywords"
+        content="Tajir Trader, wholesale trading, wholesale vegetables, wholesale fruits, wholesale nuts, wholesale spices, wholesale drinks, bulk supply">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Tajir Trader — Wholesale Trading Website">
+    <meta property="og:description"
+        content="Trading with Integrity. Explore our wholesale catalog of vegetables, fruits, drinks, spices, and nuts. Contact directly via WhatsApp or Email.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hero-banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="assets/icons/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ====================================================================
+         SECTION 1: SITE HEADER
+         ==================================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <!-- Brand Identity -->
+            <a href="index.html" class="brand-link" aria-label="Tajir Trader — Homepage">
+                <img src="assets/images/logo.svg" alt="Tajir Trader Logo" class="brand-logo-img" width="220"
+                    height="55">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Quick WhatsApp Action & Mobile Toggle -->
+            <div class="header-actions">
+                <button type="button" class="btn btn-whatsapp btn-sm header-cta-btn" onclick="contactOnWhatsApp('')"
+                    title="Chat directly with our wholesale team">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg>
+                    <span class="btn-text">WhatsApp Us</span>
+                </button>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+        <div>
+            <div class="mobile-nav-header">
+                <img src="assets/images/logo.svg" alt="Tajir Trader Logo" style="height: 38px; width: auto;">
+                <button type="button" class="mobile-nav-close-btn" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Home <span>&rarr;</span></a></li>
+                <li><a href="about.html" class="mobile-nav-link">About Us <span>&rarr;</span></a></li>
+                <li><a href="products.html" class="mobile-nav-link">Products <span>&rarr;</span></a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact Us <span>&rarr;</span></a></li>
+            </ul>
+        </div>
+        <div class="mobile-nav-contact">
+            <button type="button" class="btn btn-whatsapp" onclick="contactOnWhatsApp('')" style="width: 100%;">
+                WhatsApp Inquiry
+            </button>
+            <a href="mailto:info@tajir.uk?subject=General%20Wholesale%20Inquiry%20%E2%80%93%20Tajir%20Trader" class="btn btn-secondary" onclick="contactByEmail(''); return true;" target="_blank" rel="noopener noreferrer" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                Email Inquiries
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ====================================================================
+             SECTION 2: HERO SECTION
+             ==================================================================== -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-tag">Wholesale Trading Partner</span>
+                    <h1 class="hero-title">
+                        Quality Products. <span>Trusted Trading.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Discover quality vegetables, fruits, nuts, spices, and drinks with Tajir Trader. Your trusted
+                        partner for wholesale product trading.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="products.html" class="btn btn-primary btn-lg">
+                            Explore Products
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-white btn-lg">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>100% Quality Inspected</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Direct Farm & Origin Sourcing</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Rapid WhatsApp Communication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card-stack">
+                        <span class="hero-badge-overlay">Wholesale Catalog</span>
+                        <div class="hero-produce-montage">
+                            <img src="assets/images/hero-banner.jpg"
+                                alt="Fresh Wholesale Produce Display — Tajir Trader" width="600" height="340">
+                        </div>
+                        <div class="hero-stats-bar">
+                            <div class="hero-stat-box">
+                                <span class="stat-num">5</span>
+                                <span class="stat-label">Core Categories</span>
+                            </div>
+                            <div class="hero-stat-box">
+                                <span class="stat-num">22+</span>
+                                <span class="stat-label">Wholesale Lines</span>
+                            </div>
+                            <div class="hero-stat-box">
+                                <span class="stat-num">100%</span>
+                                <span class="stat-label">Integrity Driven</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 3: ABOUT INTRODUCTION
+             ==================================================================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="welcome-grid">
+                    <div class="welcome-image-wrapper">
+                        <img src="assets/images/about.jpg" alt="Wholesale Produce Harvest — Tajir Trader"
+                            class="welcome-main-img" width="560" height="440" loading="lazy">
+                        <div class="welcome-floating-badge">
+                            <div class="badge-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p>Trading with Integrity</p>
+                                <span style="font-size: 0.78rem; color: #6E6E6E;">Built on Transparency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="welcome-text-content">
+                        <span class="section-tag">About Our Business</span>
+                        <h2 class="section-title">Welcome to Tajir Trader</h2>
+                        <div class="gold-divider" style="margin: 0 0 20px 0;"></div>
+                        <p class="welcome-lead">
+                            Tajir Trader is committed to providing quality products and building trusted business
+                            relationships. We connect customers with a diverse range of wholesale products.
+                        </p>
+                        <p>
+                            Operating with transparency and customer commitment, we specialize in high-demand wholesale
+                            supplies across fresh vegetables, seasonal fruits, specialty nuts, natural drinks, and
+                            premium spices. We ensure every batch meets commercial standards and reaches our trade
+                            buyers reliably.
+                        </p>
+
+                        <div class="welcome-pillars">
+                            <div class="pillar-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <div>
+                                    <h4>Consistent Quality</h4>
+                                    <p>Carefully calibrated, graded, and packaged for commercial distribution.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <div>
+                                    <h4>Fast Direct Contact</h4>
+                                    <p>Instant inquiries and quotation response via WhatsApp and Email.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="about.html" class="btn btn-secondary">
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 4: PRODUCT CATEGORIES
+             ==================================================================== -->
+        <section class="section section-warm">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Explore By Category</span>
+                    <h2 class="section-title">Wholesale Product Categories</h2>
+                    <p class="section-subtitle">
+                        Browse our five core wholesale categories. Click any category to explore available varieties,
+                        pack sizes, and origin details.
+                    </p>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="categories-grid">
+                    <!-- Vegetables -->
+                    <a href="products.html?category=Vegetables" class="category-card">
+                        <div class="category-img-container">
+                            <img src="assets/images/vegetables.jpg" alt="Wholesale Vegetables" loading="lazy">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Vegetables</h3>
+                            <p class="category-desc">Fresh farm-sourced tomatoes, chillies, gourds, beans, and coriander
+                                leaves.</p>
+                            <span class="category-btn">
+                                Explore Category &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Fruits -->
+                    <a href="products.html?category=Fruits" class="category-card">
+                        <div class="category-img-container">
+                            <img src="assets/images/fruits.jpg" alt="Wholesale Fruits" loading="lazy">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Fruits</h3>
+                            <p class="category-desc">Export-grade mangoes, pomegranates, jambul, custard apples, and
+                                chickoo.</p>
+                            <span class="category-btn">
+                                Explore Category &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Drinks -->
+                    <a href="products.html?category=Drinks" class="category-card">
+                        <div class="category-img-container">
+                            <img src="assets/images/drinks.jpg" alt="Wholesale Drinks" loading="lazy">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Drinks</h3>
+                            <p class="category-desc">Premium bottled natural mineral waters and specialty club sodas.
+                            </p>
+                            <span class="category-btn">
+                                Explore Category &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Spices -->
+                    <a href="products.html?category=Spices" class="category-card">
+                        <div class="category-img-container">
+                            <img src="assets/images/spices.jpg" alt="Wholesale Spices" loading="lazy">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Spices</h3>
+                            <p class="category-desc">Bold green cardamom pods and premium aromatic whole spices.</p>
+                            <span class="category-btn">
+                                Explore Category &rarr;
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Nuts -->
+                    <a href="products.html?category=Nuts" class="category-card">
+                        <div class="category-img-container">
+                            <img src="assets/images/nuts.jpg" alt="Wholesale Nuts" loading="lazy">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Nuts</h3>
+                            <p class="category-desc">California almonds and specialized betel nut cuts (Fadcha, Diamond,
+                                Head, Whole).</p>
+                            <span class="category-btn">
+                                Explore Category &rarr;
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 5: FEATURED PRODUCTS
+             ==================================================================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag gold">Handpicked Selections</span>
+                    <h2 class="section-title">Featured Wholesale Products</h2>
+                    <p class="section-subtitle">
+                        A curated selection of our high-volume trading commodities. Contact our team directly on
+                        WhatsApp or Email for volume pricing.
+                    </p>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="products-grid" id="featuredProductsGrid">
+                    <!-- Populated dynamically by js/products.js -->
+                </div>
+
+                <div style="text-align: center; margin-top: 48px;">
+                    <a href="products.html" class="btn btn-primary btn-lg">
+                        View Complete Catalog (22 Products)
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 6: WHY CHOOSE US
+             ==================================================================== -->
+        <section class="section section-warm">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Trading Standards</span>
+                    <h2 class="section-title">Why Choose Tajir Trader?</h2>
+                    <p class="section-subtitle">
+                        Built upon commercial integrity and genuine trade reliability. Here is why wholesale clients
+                        rely on us for their recurring supplies.
+                    </p>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="advantages-grid">
+                    <!-- 1 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Quality Products</h3>
+                        <p class="advantage-desc">
+                            Strict grading and calibration standards ensure that every carton or sack delivered meets
+                            export benchmarks.
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Trusted Trading</h3>
+                        <p class="advantage-desc">
+                            "Trading with Integrity" is our foundational principle. Transparent contracts, clear terms,
+                            and no hidden surprises.
+                        </p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Customer Satisfaction</h3>
+                        <p class="advantage-desc">
+                            We listen to buyer specifications, moisture requirements, and packaging preferences to
+                            ensure long-term satisfaction.
+                        </p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Reliable Communication</h3>
+                        <p class="advantage-desc">
+                            Direct, immediate access to commercial decision makers via WhatsApp and Email for prompt
+                            quotations and updates.
+                        </p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Professional Service</h3>
+                        <p class="advantage-desc">
+                            Experienced handling of commercial bills of lading, phytosanitary requirements, and
+                            cold-chain compliance.
+                        </p>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="advantage-card">
+                        <div class="advantage-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="advantage-title">Wholesale Solutions</h3>
+                        <p class="advantage-desc">
+                            Tailored batch allocations, master carton packaging, and flexible schedules for recurring
+                            food service and grocery buyers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 7: CONTACT CTA
+             ==================================================================== -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-content">
+                        <span class="cta-tag">Direct Trade Communication</span>
+                        <h2 class="cta-title">Interested in Our Products?</h2>
+                        <p class="cta-desc">
+                            Contact our team to discuss wholesale prices, quantities, availability, and product
+                            requirements. We provide personalized quotations and reliable supply schedules.
+                        </p>
+                        <div class="cta-actions">
+                            <button type="button" class="btn btn-whatsapp btn-lg" onclick="contactOnWhatsApp('')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                                </svg>
+                                WhatsApp Us
+                            </button>
+                            <a href="mailto:info@tajir.uk?subject=General%20Wholesale%20Inquiry%20%E2%80%93%20Tajir%20Trader" class="btn btn-outline-white btn-lg" onclick="contactByEmail(''); return true;" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Email Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================================
+         SECTION 8: SITE FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- Brand & Intro -->
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Tajir Trader" class="footer-logo-img" width="220"
+                        height="55">
+                </a>
+                <p class="footer-tagline">Trading with Integrity</p>
+                <p class="footer-intro">
+                    Tajir Trader is a dedicated wholesale trading enterprise supplying quality vegetables, fruits,
+                    drinks, spices, and nuts to commercial buyers, retailers, and distributors.
+                </p>
+                <div class="footer-social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+                        aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+                        aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div>
+                <h3 class="footer-col-title">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="products.html" class="footer-link">Wholesale Products</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Product Categories -->
+            <div>
+                <h3 class="footer-col-title">Categories</h3>
+                <ul class="footer-links-list">
+                    <li><a href="products.html?category=Vegetables" class="footer-link">Vegetables</a></li>
+                    <li><a href="products.html?category=Fruits" class="footer-link">Fruits</a></li>
+                    <li><a href="products.html?category=Drinks" class="footer-link">Drinks</a></li>
+                    <li><a href="products.html?category=Spices" class="footer-link">Spices</a></li>
+                    <li><a href="products.html?category=Nuts" class="footer-link">Nuts</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 class="footer-col-title">Wholesale Desk</h3>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="javascript:void(0)" onclick="contactOnWhatsApp('')" data-tajir="phoneDisplay">+44 7886 132327</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@tajir.uk" data-tajir="email">info@tajir.uk</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div>
+                            <strong>Commercial Address:</strong><br>
+                            <span data-tajir="address">49 Park Rd, Ilford IG1 1SF, UK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Tajir Trader. All Rights Reserved.</p>
+                <p>Wholesale Trading Platform &bull; Catalog Model &bull; Trading with Integrity</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================================
+         FLOATING WHATSAPP BUTTON (Section 11.3)
+         ==================================================================== -->
+    <div class="floating-whatsapp">
+        <span class="floating-whatsapp-tooltip">Chat with Wholesale Team</span>
+        <a href="javascript:void(0)" class="floating-whatsapp-btn" id="floatingWhatsAppBtn"
+            aria-label="Contact Tajir Trader on WhatsApp">
+            <span class="floating-whatsapp-pulse"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- ====================================================================
+         PRODUCT DETAIL MODAL
+         ==================================================================== -->
+    <div class="modal-backdrop" id="productDetailModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="modal-close-btn" id="modalCloseBtn"
+                aria-label="Close product details">&times;</button>
+            <div class="modal-body">
+                <div class="modal-content-grid">
+                    <div class="modal-img-container">
+                        <img src="" alt="" id="modalProductImg">
+                    </div>
+                    <div>
+                        <span class="badge badge-category" id="modalProductCategory">Category</span>
+                        <h2 class="modal-product-title" id="modalProductTitle">Product Title</h2>
+                        <p class="modal-full-desc" id="modalProductDesc">Wholesale specifications and details.</p>
+
+                        <div class="modal-specs-list">
+                            <div class="modal-spec-row">
+                                <span class="spec-label">Packaging:</span>
+                                <span class="spec-val" id="modalSpecPackaging">-</span>
+                            </div>
+                            <div class="modal-spec-row">
+                                <span class="spec-label">Sourcing / Origin:</span>
+                                <span class="spec-val" id="modalSpecOrigin">-</span>
+                            </div>
+                            <div class="modal-spec-row">
+                                <span class="spec-label">Grade / Standard:</span>
+                                <span class="spec-val" id="modalSpecGrade">-</span>
+                            </div>
+                            <div class="modal-spec-row">
+                                <span class="spec-label">Minimum Order:</span>
+                                <span class="spec-val" id="modalSpecMinOrder">-</span>
+                            </div>
+                            <div class="modal-spec-row">
+                                <span class="spec-label">Shelf Life & Storage:</span>
+                                <span class="spec-val" id="modalSpecShelfLife">-</span>
+                            </div>
+                        </div>
+
+                        <div class="modal-actions">
+                            <button type="button" class="btn btn-whatsapp" id="modalWhatsAppBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                                </svg>
+                                Inquire via WhatsApp
+                            </button>
+                            <a href="mailto:info@tajir.uk" class="btn btn-secondary" id="modalEmailBtn" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Inquire via Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

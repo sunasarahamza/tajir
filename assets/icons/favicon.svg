@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favTajir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#245C3A" />
+      <stop offset="100%" stop-color="#183D2B" />
+    </linearGradient>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2CB6E" />
+      <stop offset="100%" stop-color="#B88A24" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#245C3A"/>
+  <circle cx="32" cy="32" r="26" fill="#183D2B" stroke="#D6A642" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#D6A642" stroke-width="0.8" stroke-dasharray="2 1.5"/>
+  <!-- Leaf crescent -->
+  <path d="M 20,38 C 16,25 24,15 32,13 C 34,22 30,34 20,38 Z" fill="#F7F3EA"/>
+  <path d="M 44,38 C 48,25 40,15 32,13 C 30,22 34,34 44,38 Z" fill="#F7F3EA"/>
+  <path d="M 32,15 C 35,22 36,30 32,37 C 28,30 29,22 32,15 Z" fill="url(#favGold)"/>
+  <polygon points="32,9 34.5,12 32,15 29.5,12" fill="url(#favGold)"/>
+  <path d="M 23,43 L 41,43 L 38,47 L 26,47 Z" fill="#D6A642"/>
+</svg>
+

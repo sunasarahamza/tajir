@@ -1,0 +1,426 @@
+/* ==========================================================================
+   TAJIR TRADER — Products Catalog Stylesheet
+   File: css/products.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Products Page Header Banner
+   -------------------------------------------------------------------------- */
+.catalog-hero {
+    background-color: var(--color-forest-dark);
+    color: var(--color-white);
+    padding: var(--space-3xl) 0;
+    position: relative;
+    border-bottom: 2px solid var(--color-golden);
+}
+
+.catalog-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.catalog-hero-text h1 {
+    color: var(--color-white);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: var(--space-xs);
+}
+
+.catalog-hero-text p {
+    color: rgba(247, 243, 234, 0.85);
+    font-size: 1.05rem;
+    max-width: 600px;
+}
+
+.catalog-count-pill {
+    background: rgba(214, 166, 66, 0.2);
+    border: 1px solid var(--color-golden);
+    color: var(--color-golden-light);
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.catalog-count-pill span {
+    background-color: var(--color-golden);
+    color: var(--color-forest-dark);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. Catalog Layout (Sidebar + Main Grid)
+   -------------------------------------------------------------------------- */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: var(--space-2xl);
+    align-items: start;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-4xl);
+    min-width: 0;
+    width: 100%;
+}
+
+.catalog-main {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sidebar Filters
+   -------------------------------------------------------------------------- */
+.catalog-sidebar {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+.sidebar-title {
+    font-size: 1.15rem;
+    color: var(--color-forest-dark);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-forest-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.category-filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    color: var(--color-charcoal);
+    font-weight: 500;
+    font-size: 0.94rem;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.category-filter-btn:hover {
+    background-color: var(--color-forest-subtle);
+    color: var(--color-forest);
+}
+
+.category-filter-btn.active {
+    background-color: var(--color-forest);
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.category-count {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-warm-beige);
+    color: var(--color-charcoal-light);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.category-filter-btn:hover .category-count {
+    background-color: rgba(36, 92, 58, 0.15);
+    color: var(--color-forest);
+}
+
+.category-filter-btn.active .category-count {
+    background-color: var(--color-golden);
+    color: var(--color-forest-dark);
+}
+
+/* Wholesale Sidebar Help Box */
+.sidebar-help-box {
+    margin-top: var(--space-xl);
+    padding: var(--space-md);
+    background-color: var(--color-warm-beige);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-golden);
+}
+
+.sidebar-help-box h4 {
+    font-size: 0.95rem;
+    color: var(--color-forest-dark);
+    margin-bottom: 4px;
+}
+
+.sidebar-help-box p {
+    font-size: 0.82rem;
+    color: var(--color-muted);
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Category Filter Scroller
+   -------------------------------------------------------------------------- */
+.mobile-category-bar {
+    display: none;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-lg);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.mobile-category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.mobile-chip.active {
+    background-color: var(--color-forest);
+    color: var(--color-white);
+    border-color: var(--color-forest);
+}
+
+/* --------------------------------------------------------------------------
+   5. Search & Sort Control Bar
+   -------------------------------------------------------------------------- */
+.catalog-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    background-color: var(--color-white);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.search-box {
+    position: relative;
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 480px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 11px 40px 11px 42px;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-warm-beige-light);
+    font-size: 0.94rem;
+    outline: none;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.search-input:focus {
+    border-color: var(--color-forest);
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(36, 92, 58, 0.12);
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-muted);
+    pointer-events: none;
+}
+
+.search-clear-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 4px;
+    display: none;
+}
+
+.search-clear-btn.visible {
+    display: block;
+}
+
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.results-info {
+    font-size: 0.88rem;
+    color: var(--color-muted);
+    white-space: nowrap;
+}
+
+.sort-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-label {
+    font-size: 0.88rem;
+    color: var(--color-charcoal-light);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sort-select {
+    padding: 9px 32px 9px 12px;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-warm-beige-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23245C3A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    transition: border-color var(--transition-fast);
+}
+
+.sort-select:focus {
+    border-color: var(--color-forest);
+}
+
+/* --------------------------------------------------------------------------
+   6. Active Filters Bar
+   -------------------------------------------------------------------------- */
+.active-filters-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space-lg);
+}
+
+.active-filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background-color: var(--color-forest-subtle);
+    border: 1px solid rgba(36, 92, 58, 0.2);
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    color: var(--color-forest-dark);
+    font-weight: 500;
+}
+
+.active-filter-tag button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-forest);
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 0 2px;
+}
+
+.reset-all-filters-btn {
+    font-size: 0.82rem;
+    color: var(--color-golden-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   7. Product Grid in Catalog Page
+   -------------------------------------------------------------------------- */
+.catalog-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xl);
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   8. Empty State View
+   -------------------------------------------------------------------------- */
+.empty-catalog-state {
+    text-align: center;
+    padding: var(--space-4xl) var(--space-xl);
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl);
+    border: 1px dashed var(--color-border);
+    grid-column: 1 / -1;
+}
+
+.empty-icon-box {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--color-forest-subtle);
+    color: var(--color-forest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+}
+
+.empty-catalog-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-forest-dark);
+}
+
+.empty-catalog-state p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    max-width: 440px;
+    margin: 0 auto var(--space-lg);
+}
+

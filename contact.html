@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Tajir Trader | Wholesale Desk WhatsApp & Email Inquiries</title>
+    <meta name="description" content="Get in touch with Tajir Trader for wholesale prices, bulk orders, and product availability. Contact directly through WhatsApp or Email.">
+    <meta name="keywords" content="Contact Tajir Trader, wholesale inquiry, WhatsApp wholesale trading, bulk produce contact">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Contact Us — Tajir Trader Wholesale Desk">
+    <meta property="og:description" content="Reach our wholesale team directly via WhatsApp or Email. Discuss volume pricing, packaging, and delivery details.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hero-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="assets/icons/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .contact-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .contact-channel-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl) var(--space-xl);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .contact-channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .channel-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .channel-icon.whatsapp-bg {
+            background-color: rgba(37, 211, 102, 0.14);
+            color: var(--color-whatsapp);
+        }
+
+        .channel-icon.email-bg {
+            background-color: var(--color-forest-subtle);
+            color: var(--color-forest);
+        }
+
+        .channel-icon.location-bg {
+            background-color: var(--color-golden-light);
+            color: var(--color-golden-dark);
+        }
+
+        .contact-form-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
+            padding: var(--space-3xl) var(--space-2xl);
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: var(--space-lg);
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-forest-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid var(--color-border);
+            background-color: var(--color-warm-beige-light);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-control:focus {
+            border-color: var(--color-forest);
+            background-color: var(--color-white);
+        }
+
+        .channel-radios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+            margin-top: 6px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .form-row-2 {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+            .contact-form-card {
+                padding: var(--space-2xl) var(--space-lg);
+            }
+            .channel-radios {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .radio-option {
+                padding: 10px 14px;
+                background-color: var(--color-warm-beige-light);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====================================================================
+         SITE HEADER
+         ==================================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="index.html" class="brand-link" aria-label="Tajir Trader — Homepage">
+                <img src="assets/images/logo.svg" alt="Tajir Trader Logo" class="brand-logo-img" width="220" height="55">
+            </a>
+
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="btn btn-whatsapp btn-sm header-cta-btn" onclick="contactOnWhatsApp('')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span class="btn-text">WhatsApp Us</span>
+                </button>
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+        <div>
+            <div class="mobile-nav-header">
+                <img src="assets/images/logo.svg" alt="Tajir Trader Logo" style="height: 38px; width: auto;">
+                <button type="button" class="mobile-nav-close-btn" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a></li>
+                <li><a href="about.html" class="mobile-nav-link">About Us <span>&rarr;</span></a></li>
+                <li><a href="products.html" class="mobile-nav-link">Products <span>&rarr;</span></a></li>
+                <li><a href="contact.html" class="mobile-nav-link active">Contact Us <span>&rarr;</span></a></li>
+            </ul>
+        </div>
+        <div class="mobile-nav-contact">
+            <button type="button" class="btn btn-whatsapp" onclick="contactOnWhatsApp('')" style="width: 100%;">
+                WhatsApp Inquiry
+            </button>
+            <a href="mailto:info@tajir.uk?subject=General%20Wholesale%20Inquiry%20%E2%80%93%20Tajir%20Trader" class="btn btn-secondary" onclick="contactByEmail(''); return true;" target="_blank" rel="noopener noreferrer" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                Email Inquiries
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ====================================================================
+             SECTION 1: INTRODUCTION
+             ==================================================================== -->
+        <section class="section-dark" style="padding: 60px 0; border-bottom: 3px solid var(--color-golden);">
+            <div class="container" style="text-align: center;">
+                <span class="section-tag gold">Direct Commercial Desk</span>
+                <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.4rem); margin-bottom: 12px; color: var(--color-white);">Get in Touch</h1>
+                <p style="font-size: 1.15rem; color: rgba(247, 243, 234, 0.9); max-width: 680px; margin: 0 auto;">
+                    Have questions about our products or wholesale purchasing? Contact us through WhatsApp or Email.
+                </p>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             SECTION 2, 3, 4: CONTACT INFORMATION & CHANNELS
+             ==================================================================== -->
+        <section class="section section-warm">
+            <div class="container">
+                <div class="contact-cards-grid">
+                    <!-- SECTION 3: WhatsApp Contact Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon whatsapp-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.35rem; color: var(--color-forest-dark); margin-bottom: 6px;">WhatsApp Direct</h3>
+                        <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+                            Fastest response for real-time stock checks, photos, and volume price negotiations.
+                        </p>
+                        <p style="font-size: 1.12rem; font-weight: 700; color: var(--color-forest); margin-bottom: 24px;">
+                            <span data-tajir="phoneDisplay">+44 7886 132327</span>
+                        </p>
+                        <div style="margin-top: auto;">
+                            <button type="button" class="btn btn-whatsapp" onclick="contactOnWhatsApp('')" style="width: 100%;">
+                                Open WhatsApp Inquiry
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: Email Contact Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon email-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.35rem; color: var(--color-forest-dark); margin-bottom: 6px;">Official Email</h3>
+                        <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+                            Ideal for official RFQs, purchase orders, commercial contracts, and documentation.
+                        </p>
+                        <p style="font-size: 1.05rem; font-weight: 700; color: var(--color-forest); margin-bottom: 24px;">
+                            <a href="mailto:info@tajir.uk" data-tajir="email">info@tajir.uk</a>
+                        </p>
+                        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+                            <a href="mailto:info@tajir.uk?subject=General%20Wholesale%20Inquiry%20%E2%80%93%20Tajir%20Trader&body=Hello%20Tajir%20Trader%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20wholesale%20product%20catalog%2C%20volume%20pricing%2C%20and%20supply%20capabilities.%0A%0APlease%20get%20in%20touch%20with%20your%20latest%20wholesale%20terms.%0A%0AThank%20you." 
+                               class="btn btn-secondary" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Send Email Inquiry
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@tajir.uk&su=General%20Wholesale%20Inquiry%20%E2%80%93%20Tajir%20Trader&body=Hello%20Tajir%20Trader%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20wholesale%20product%20catalog%2C%20volume%20pricing%2C%20and%20supply%20capabilities.%0A%0APlease%20get%20in%20touch%20with%20your%20latest%20wholesale%20terms.%0A%0AThank%20you." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn btn-sm" 
+                               style="background-color: var(--color-warm-beige); color: var(--color-forest-dark); border: 1px solid var(--color-border); font-size: 0.82rem; font-weight: 500;">
+                                Or Open in Gmail (Web) &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Address & Hours Card -->
+                    <div class="contact-channel-card">
+                        <div class="channel-icon location-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.35rem; color: var(--color-forest-dark); margin-bottom: 6px;">Trading Address</h3>
+                        <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 12px;">
+                            <span data-tajir="address">49 Park Rd, Ilford IG1 1SF, UK</span>
+                        </p>
+                        <div style="background-color: var(--color-warm-beige); border-radius: var(--radius-md); padding: 12px; margin-top: auto; border-left: 3px solid var(--color-golden);">
+                            <strong style="font-size: 0.82rem; color: var(--color-forest-dark); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px;">Business Hours:</strong>
+                            <span style="font-size: 0.85rem; color: var(--color-charcoal-light);" data-tajir="hours">Monday – Saturday: 8:00 AM – 7:00 PM (GMT)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====================================================================
+                     SECTION 5: CLIENT-SIDE WHOLESALE INQUIRY ASSISTANT
+                     (No backend required, prepares prefilled message for WhatsApp / Email)
+                     ==================================================================== -->
+                <div class="contact-form-card">
+                    <div style="text-align: center; margin-bottom: 28px;">
+                        <span class="section-tag">Interactive Assistant</span>
+                        <h2 style="font-size: 1.8rem; color: var(--color-forest-dark); margin-bottom: 8px;">
+                            Prepare a Wholesale Inquiry
+                        </h2>
+                        <p style="font-size: 0.95rem; color: var(--color-muted);">
+                            Fill in your requirements below to instantly launch a prefilled WhatsApp message or email inquiry to our trade desk.
+                        </p>
+                    </div>
+
+                    <form id="wholesaleInquiryForm">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="inquiryName">Your Name / Trade Contact *</label>
+                                <input type="text" id="inquiryName" class="form-control" placeholder="e.g. Tariq Ahmed" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiryCompany">Company / Business Name</label>
+                                <input type="text" id="inquiryCompany" class="form-control" placeholder="e.g. Al Baraka Trading LLC">
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="inquiryCategory">Category of Interest</label>
+                                <select id="inquiryCategory" class="form-control">
+                                    <option value="Vegetables">Vegetables</option>
+                                    <option value="Fruits">Fruits</option>
+                                    <option value="Drinks">Drinks</option>
+                                    <option value="Spices">Spices</option>
+                                    <option value="Nuts">Nuts</option>
+                                    <option value="Multiple Categories / Mixed Order">Multiple Categories / Mixed Order</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiryProducts">Specific Products</label>
+                                <input type="text" id="inquiryProducts" class="form-control" placeholder="e.g. Mangoes, Cardamom, Almonds">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiryNotes">Order Notes / Quantities / Delivery Destination</label>
+                            <textarea id="inquiryNotes" class="form-control" rows="3" placeholder="e.g. Looking for 50 cartons weekly delivery to regional cold storage..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Contact Channel:</label>
+                            <div class="channel-radios">
+                                <label class="radio-option">
+                                    <input type="radio" name="inquiryChannel" value="whatsapp" checked>
+                                    <strong>WhatsApp (Fastest)</strong>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="inquiryChannel" value="email">
+                                    <strong>Email App (Mail / Outlook)</strong>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="inquiryChannel" value="gmail">
+                                    <strong>Gmail (Web Browser)</strong>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px; text-align: center;">
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px;">
+                                Launch Prefilled Inquiry
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Transparency Notice -->
+        <section class="section section-alt" style="padding-top: 0;">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <div style="background-color: var(--color-warm-beige); padding: var(--space-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                    <h3 style="font-size: 1.15rem; color: var(--color-forest-dark); margin-bottom: 6px;">Important Wholesale Notice</h3>
+                    <p style="font-size: 0.88rem; color: var(--color-muted); line-height: 1.6;">
+                        Tajir Trader operates exclusively on a catalog wholesale model. We do not conduct automated e-commerce credit card checkouts. All commercial pricing, lot availability, moisture tests, phytosanitary requirements, and delivery arrangements are confirmed directly and individually with our trading team.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Tajir Trader" class="footer-logo-img" width="220" height="55">
+                </a>
+                <p class="footer-tagline">Trading with Integrity</p>
+                <p class="footer-intro">
+                    Tajir Trader connects global agricultural producers with wholesale buyers through transparent, reliable trade relationships.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="footer-col-title">Navigation</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="products.html" class="footer-link">Products Catalog</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-col-title">Categories</h3>
+                <ul class="footer-links-list">
+                    <li><a href="products.html?category=Vegetables" class="footer-link">Vegetables</a></li>
+                    <li><a href="products.html?category=Fruits" class="footer-link">Fruits</a></li>
+                    <li><a href="products.html?category=Drinks" class="footer-link">Drinks</a></li>
+                    <li><a href="products.html?category=Spices" class="footer-link">Spices</a></li>
+                    <li><a href="products.html?category=Nuts" class="footer-link">Nuts</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-col-title">Wholesale Inquiries</h3>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="javascript:void(0)" onclick="contactOnWhatsApp('')" data-tajir="phoneDisplay">+44 7886 132327</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@tajir.uk" data-tajir="email">info@tajir.uk</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Tajir Trader. All Rights Reserved.</p>
+                <p>Wholesale Trading Platform &bull; Trading with Integrity</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="floating-whatsapp">
+        <span class="floating-whatsapp-tooltip">Chat with Wholesale Team</span>
+        <a href="javascript:void(0)" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" aria-label="Contact Tajir Trader on WhatsApp">
+            <span class="floating-whatsapp-pulse"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

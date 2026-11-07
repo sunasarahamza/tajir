@@ -1,0 +1,820 @@
+/* ==========================================================================
+   TAJIR TRADER — Comprehensive Responsive Stylesheet
+   File: css/responsive.css
+   Version: 2.1 — Mobile Optimization Overhaul
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Global Mobile & Base Reset Rules
+   -------------------------------------------------------------------------- */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   1. Large Screens & Laptops (< 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .container {
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. Tablets (< 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    :root {
+        --header-height: 72px;
+    }
+
+    .section {
+        padding-top: var(--space-3xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    /* Header & Navigation */
+    .main-nav {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .brand-logo-img {
+        height: 40px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: calc(var(--space-3xl) + 10px) 0 var(--space-3xl);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-highlights {
+        justify-content: center;
+    }
+
+    .hero-card-stack {
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    /* Welcome / About Intro */
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .welcome-image-wrapper {
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .welcome-main-img {
+        height: 320px;
+    }
+
+    .welcome-floating-badge {
+        position: static;
+        margin-top: 14px;
+        max-width: 100%;
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Categories & Advantages */
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    /* Products Catalog Layout */
+    .catalog-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: var(--space-xl);
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-3xl);
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .catalog-main {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .catalog-sidebar {
+        display: none !important;
+    }
+
+    .mobile-category-bar {
+        display: flex !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        padding: 4px 2px 14px 2px;
+        margin-bottom: var(--space-lg);
+        scrollbar-width: none;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .mobile-category-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-chip {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 9px 18px;
+        font-size: 0.88rem;
+    }
+
+    .catalog-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: var(--space-lg);
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* About Page Custom Grids */
+    .about-mv-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-xl) !important;
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--space-lg) !important;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Modal */
+    .modal-content-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .modal-img-container img {
+        height: 240px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Small Tablets & Landscape Mobile (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 68px;
+    }
+
+    .section {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 5vw, 2.15rem);
+    }
+
+    .section-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .page-header-section,
+    .catalog-hero,
+    .section-dark {
+        padding: 44px 0 !important;
+    }
+
+    /* Header adjustments */
+    .header-container {
+        gap: var(--space-sm);
+    }
+
+    .header-cta-btn {
+        padding: 8px 12px;
+        font-size: 0.82rem;
+    }
+
+    /* Hero section */
+    .hero-section {
+        padding: var(--space-2xl) 0 var(--space-3xl);
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 6.5vw, 2.6rem);
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+
+    .hero-card-stack {
+        padding: var(--space-lg);
+    }
+
+    .hero-produce-montage img {
+        height: 240px;
+    }
+
+    .products-grid,
+    .catalog-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: var(--space-md);
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Products Catalog Controls */
+    .catalog-controls {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--space-md);
+        gap: var(--space-md);
+    }
+
+    .search-box {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .search-input {
+        font-size: 16px; /* Prevents iOS auto-zoom on focus */
+        padding: 12px 38px 12px 42px;
+    }
+
+    .controls-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .sort-select {
+        font-size: 16px; /* Prevents iOS auto-zoom */
+        padding: 8px 12px;
+    }
+
+    /* About Page Custom Grids */
+    .about-mv-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg) !important;
+    }
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-md) !important;
+    }
+
+    /* Welcome Pillars */
+    .welcome-pillars {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .advantage-card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .cta-title {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp-tooltip {
+        display: none !important;
+    }
+
+    .floating-whatsapp {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .floating-whatsapp-btn {
+        width: 54px;
+        height: 54px;
+    }
+
+    .floating-whatsapp-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .scroll-top-btn {
+        bottom: 16px;
+        left: 16px;
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Modal Mobile */
+    .modal-backdrop {
+        padding: 14px;
+    }
+
+    .modal-dialog {
+        max-height: 92vh;
+        border-radius: var(--radius-lg);
+    }
+
+    .modal-body {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .modal-img-container img {
+        height: 210px;
+    }
+
+    .modal-product-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-close-btn {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        background-color: var(--color-white);
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Contact Page */
+    .contact-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg) !important;
+    }
+
+    .contact-channel-card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .contact-form-card {
+        padding: var(--space-2xl) var(--space-lg) !important;
+    }
+
+    .form-row-2 {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .form-control {
+        font-size: 16px !important; /* Prevents iOS auto-zoom */
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. Portrait Smartphones (< 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+    :root {
+        --header-height: 64px;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .section {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    /* Header Compact */
+    .brand-logo-img {
+        height: 34px;
+        max-width: 155px;
+    }
+
+    .header-cta-btn {
+        padding: 7px 10px;
+        font-size: 0.78rem;
+        gap: 5px;
+    }
+
+    .header-cta-btn svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 36px 0 44px;
+    }
+
+    .hero-tag {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+        margin-bottom: var(--space-md);
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 7vw, 2.2rem);
+        margin-bottom: var(--space-md);
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+        margin-bottom: var(--space-xl);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: var(--space-xl);
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 48px;
+        font-size: 0.96rem;
+    }
+
+    .hero-highlights {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: var(--space-md);
+    }
+
+    .highlight-item {
+        font-size: 0.86rem;
+        gap: 8px;
+    }
+
+    .hero-card-stack {
+        padding: 14px;
+        border-radius: var(--radius-lg);
+    }
+
+    .hero-produce-montage img {
+        height: 190px;
+    }
+
+    .hero-badge-overlay {
+        top: -12px;
+        right: 14px;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .hero-stats-bar {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .hero-stat-box {
+        padding: 8px 4px;
+    }
+
+    .stat-num {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Welcome / About Intro */
+    .welcome-main-img {
+        height: 220px;
+        border-radius: var(--radius-lg);
+    }
+
+    .welcome-floating-badge {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .welcome-floating-badge .badge-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .welcome-text-content .welcome-lead {
+        font-size: 1.05rem;
+    }
+
+    .welcome-text-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Categories Grid */
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .category-img-container {
+        height: 160px;
+    }
+
+    .category-body {
+        padding: 16px 14px;
+    }
+
+    .category-title {
+        font-size: 1.18rem;
+    }
+
+    /* Product Grids (1 Column Clean Cards on Mobile) */
+    .products-grid,
+    .catalog-products-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .product-card {
+        border-radius: var(--radius-lg);
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .product-img-wrap {
+        height: 200px;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .product-img-wrap img {
+        padding: 8px;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-title {
+        font-size: 1.15rem;
+    }
+
+    .product-desc {
+        font-size: 0.85rem;
+        margin-bottom: var(--space-md);
+    }
+
+    .product-actions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .product-actions .btn {
+        width: 100%;
+        min-height: 42px;
+        font-size: 0.88rem;
+        padding: 10px 12px;
+    }
+
+    /* Catalog Controls Stacking */
+    .catalog-controls {
+        padding: 12px;
+        border-radius: var(--radius-md);
+        gap: 10px;
+    }
+
+    .controls-right {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .results-info {
+        text-align: center;
+        font-size: 0.82rem;
+    }
+
+    .sort-wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sort-select {
+        flex-grow: 1;
+    }
+
+    /* Mobile Drawer */
+    .mobile-nav-drawer {
+        width: 88%;
+        max-width: 320px;
+        padding: var(--space-xl) 18px var(--space-lg);
+    }
+
+    .mobile-nav-link {
+        font-size: 1.05rem;
+        padding: 12px 0;
+    }
+
+    /* About Us Page */
+    .about-values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    /* Contact Page Radio Options */
+    .channel-radios {
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: stretch !important;
+    }
+
+    .radio-option {
+        padding: 10px 14px;
+        background-color: var(--color-warm-beige-light);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-brand .footer-logo-img {
+        height: 42px;
+    }
+
+    .footer-bottom-flex {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   5. Extra-Small Mobile Screens (< 380px — e.g. iPhone SE, 320px–360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 380px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .brand-logo-img {
+        height: 30px;
+        max-width: 135px;
+    }
+
+    /* On very small screens, convert WhatsApp header button to icon-only */
+    .header-cta-btn span.btn-text {
+        display: none;
+    }
+
+    .header-cta-btn {
+        padding: 8px 10px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-title {
+        font-size: 1.65rem;
+    }
+
+    .hero-produce-montage img {
+        height: 170px;
+    }
+
+    .product-img-wrap {
+        height: 180px;
+    }
+
+    .modal-backdrop {
+        padding: 8px;
+    }
+
+    .modal-body {
+        padding: 14px 12px;
+    }
+
+    .modal-img-container img {
+        height: 180px;
+    }
+
+    .modal-spec-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .spec-val {
+        text-align: left;
+    }
+
+    .floating-whatsapp {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .floating-whatsapp-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .floating-whatsapp-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .scroll-top-btn {
+        bottom: 12px;
+        left: 12px;
+        width: 38px;
+        height: 38px;
+    }
+}
