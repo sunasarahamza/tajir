@@ -1,4 +1,4 @@
-# TAJIR TRADER — Wholesale Trading Website
+# TAJIR — Wholesale Trading Website
 
 > **Brand Tagline:** Trading with Integrity  
 > **Version:** 2.0  
@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-Tajir Trader is a clean, modern, and fully responsive wholesale trading business website designed to showcase 5 core product categories:
+Tajir is a clean, modern, and fully responsive wholesale trading business website designed to showcase 5 core product categories:
 1. **Vegetables**
 2. **Fruits**
 3. **Drinks**
@@ -132,7 +132,7 @@ Open `js/products-data.js` and edit the `TAJIR_CONFIG` object:
 
 ```javascript
 const TAJIR_CONFIG = {
-    brandName: "Tajir Trader",
+    brandName: "Tajir",
     tagline: "Trading with Integrity",
     whatsappNumber: "447886132327",       // Your phone number with country code, no + or spaces
     whatsappDisplay: "+44 7886 132327",  // Visual display formatted
@@ -173,7 +173,7 @@ In `js/products-data.js`, simply append an object to the `PRODUCTS` array:
    ```bash
    git init
    git add .
-   git commit -m "Initial release of Tajir Trader Wholesale Website"
+   git commit -m "Initial release of Tajir Wholesale Website"
    git branch -M main
    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
    git push -u origin main

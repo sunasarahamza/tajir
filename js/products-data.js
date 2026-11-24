@@ -1,12 +1,12 @@
 /**
- * TAJIR TRADER — Product Catalog Data & Wholesale Business Configuration
+ * TAJIR — Product Catalog Data & Wholesale Business Configuration
  * Brand Tagline: Trading with Integrity
  * 
  * Configurable Wholesale Business Details & Product Catalog
  */
 
 const TAJIR_CONFIG = {
-    brandName: "Tajir Trader",
+    brandName: "Tajir",
     tagline: "Trading with Integrity",
     // Configurable WhatsApp Number: Country code without '+' or spaces for wa.me
     // Example: 447886132327 (UK)
@@ -408,12 +408,12 @@ function getWhatsAppInquiryUrl(productName, customNotes = "") {
     let message = "";
     
     if (productName && productName.trim() !== "") {
-        message = `Hello Tajir Trader, I am interested in purchasing ${productName.trim()}. Please share the wholesale price, available quantity, and delivery details.`;
+        message = `Hello Tajir, I am interested in purchasing ${productName.trim()}. Please share the wholesale price, available quantity, and delivery details.`;
         if (customNotes && customNotes.trim() !== "") {
             message += ` Note: ${customNotes.trim()}`;
         }
     } else {
-        message = "Hello Tajir Trader, I would like to know more about your products and wholesale purchasing options.";
+        message = "Hello Tajir, I would like to know more about your products and wholesale purchasing options.";
     }
     
     return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -431,14 +431,14 @@ function getEmailInquiryUrl(productName, customNotes = "") {
     
     if (productName && productName.trim() !== "") {
         subject = `Product Inquiry – ${productName.trim()}`;
-        body = `Hello Tajir Trader,\n\nI am interested in purchasing ${productName.trim()}.\n\nPlease share the wholesale pricing, minimum order quantity, availability, and delivery details.`;
+        body = `Hello Tajir,\n\nI am interested in purchasing ${productName.trim()}.\n\nPlease share the wholesale pricing, minimum order quantity, availability, and delivery details.`;
         if (customNotes && customNotes.trim() !== "") {
             body += `\n\nAdditional Requirements:\n${customNotes.trim()}`;
         }
         body += "\n\nThank you.";
     } else {
-        subject = "General Wholesale Inquiry – Tajir Trader";
-        body = "Hello Tajir Trader,\n\nI am interested in learning more about your wholesale product catalog, volume pricing, and supply capabilities.\n\nPlease get in touch with your latest wholesale terms.\n\nThank you.";
+        subject = "General Wholesale Inquiry – Tajir";
+        body = "Hello Tajir,\n\nI am interested in learning more about your wholesale product catalog, volume pricing, and supply capabilities.\n\nPlease get in touch with your latest wholesale terms.\n\nThank you.";
     }
     
     return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -481,14 +481,14 @@ function contactOnGmail(productName, customNotes = "") {
     
     if (productName && productName.trim() !== "") {
         subject = `Product Inquiry – ${productName.trim()}`;
-        body = `Hello Tajir Trader,\n\nI am interested in purchasing ${productName.trim()}.\n\nPlease share the wholesale pricing, minimum order quantity, availability, and delivery details.`;
+        body = `Hello Tajir,\n\nI am interested in purchasing ${productName.trim()}.\n\nPlease share the wholesale pricing, minimum order quantity, availability, and delivery details.`;
         if (customNotes && customNotes.trim() !== "") {
             body += `\n\nAdditional Requirements:\n${customNotes.trim()}`;
         }
         body += "\n\nThank you.";
     } else {
-        subject = "General Wholesale Inquiry – Tajir Trader";
-        body = "Hello Tajir Trader,\n\nI am interested in learning more about your wholesale product catalog, volume pricing, and supply capabilities.\n\nPlease get in touch with your latest wholesale terms.\n\nThank you.";
+        subject = "General Wholesale Inquiry – Tajir";
+        body = "Hello Tajir,\n\nI am interested in learning more about your wholesale product catalog, volume pricing, and supply capabilities.\n\nPlease get in touch with your latest wholesale terms.\n\nThank you.";
     }
     
     const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

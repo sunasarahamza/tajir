@@ -1,5 +1,5 @@
 /**
- * TAJIR TRADER — Products Catalog & Modal Controller
+ * TAJIR — Products Catalog & Modal Controller
  * File: js/products.js
  * Version: 2.0
  */

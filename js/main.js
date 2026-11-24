@@ -1,5 +1,5 @@
 /**
- * TAJIR TRADER — Main Script
+ * TAJIR — Main Script
  * Brand Tagline: Trading with Integrity
  * Version: 2.0
  */
@@ -188,17 +188,17 @@ function initContactPageForm() {
         if (notes) customSummary += ` | Details: ${notes}`;
 
         if (channel === 'whatsapp') {
-            const message = `Hello Tajir Trader,\n\nI am contacting you regarding a wholesale inquiry:\n- Name: ${name}\n- Business/Company: ${company || 'N/A'}\n- Category of Interest: ${category}\n- Products: ${products || 'General wholesale inquiry'}\n- Requirements/Quantity: ${notes || 'Standard wholesale inquiry'}\n\nPlease share your current availability, pricing list, and wholesale supply terms.`;
+            const message = `Hello Tajir,\n\nI am contacting you regarding a wholesale inquiry:\n- Name: ${name}\n- Business/Company: ${company || 'N/A'}\n- Category of Interest: ${category}\n- Products: ${products || 'General wholesale inquiry'}\n- Requirements/Quantity: ${notes || 'Standard wholesale inquiry'}\n\nPlease share your current availability, pricing list, and wholesale supply terms.`;
             const url = `https://wa.me/${TAJIR_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
             window.open(url, "_blank", "noopener,noreferrer");
         } else if (channel === 'gmail') {
-            const subject = `Wholesale Inquiry – ${company || name || 'New Trader'}`;
-            const body = `Hello Tajir Trader,\n\nI would like to inquire about your wholesale catalog and bulk trading terms:\n\nName: ${name}\nCompany: ${company || 'Individual / Retailer'}\nCategory: ${category}\nProducts Needed: ${products}\nAdditional Requirements / Quantities:\n${notes}\n\nPlease reply with your wholesale price catalog and delivery schedule.\n\nThank you,\n${name}`;
+            const subject = `Wholesale Inquiry – ${company || name || 'Wholesale Client'}`;
+            const body = `Hello Tajir,\n\nI would like to inquire about your wholesale catalog and bulk trading terms:\n\nName: ${name}\nCompany: ${company || 'Individual / Retailer'}\nCategory: ${category}\nProducts Needed: ${products}\nAdditional Requirements / Quantities:\n${notes}\n\nPlease reply with your wholesale price catalog and delivery schedule.\n\nThank you,\n${name}`;
             const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(TAJIR_CONFIG.businessEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(url, "_blank", "noopener,noreferrer");
         } else {
-            const subject = `Wholesale Inquiry – ${company || name || 'New Trader'}`;
-            const body = `Hello Tajir Trader,\n\nI would like to inquire about your wholesale catalog and bulk trading terms:\n\nName: ${name}\nCompany: ${company || 'Individual / Retailer'}\nCategory: ${category}\nProducts Needed: ${products}\nAdditional Requirements / Quantities:\n${notes}\n\nPlease reply with your wholesale price catalog and delivery schedule.\n\nThank you,\n${name}`;
+            const subject = `Wholesale Inquiry – ${company || name || 'Wholesale Client'}`;
+            const body = `Hello Tajir,\n\nI would like to inquire about your wholesale catalog and bulk trading terms:\n\nName: ${name}\nCompany: ${company || 'Individual / Retailer'}\nCategory: ${category}\nProducts Needed: ${products}\nAdditional Requirements / Quantities:\n${notes}\n\nPlease reply with your wholesale price catalog and delivery schedule.\n\nThank you,\n${name}`;
             const url = `mailto:${TAJIR_CONFIG.businessEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             
             const link = document.createElement('a');
